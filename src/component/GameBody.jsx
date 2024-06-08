@@ -8,46 +8,71 @@ const GameBody = ({
   isSelected,
   random,
   generateRandomNumber,
-  spin
+  spin,
+  titlee,
 }) => {
   return (
     <div className="gamebody">
+      <h1
+        className="losswon"
+        style={{
+          backgroundColor: titlee === true ? "red" : "yellow",
+          display: titlee === true ? "none" : "block",
+        }}
+      >
+        You Won
+      </h1>
       <PointBox random={random} isSelected={spin} />
-      
+
       <button
         className="playbtn"
         disabled={isSelected === true ? false : true}
         onClick={generateRandomNumber}
         style={{
-          backgroundColor: isSelected === true ? "black" : "grey",
+          backgroundColor: isSelected === true ? "green" : "grey",
           color: isSelected === true ? "white" : "whitesmoke",
         }}
       >
         Play
       </button>
       <div className="radiobtn">
-        <label htmlFor="#">
+        <label
+          style={{
+            backgroundColor: selectedCheckbox === "one" ? "green" : "grey",
+          }}
+        >
           7 ⬆
           <input
+            hidden
             type="radio"
             value="one"
             checked={selectedCheckbox === "one"}
             onChange={handleCheckboxChange}
           />
         </label>
-        <label htmlFor="#">
+        <label
+          style={{
+            backgroundColor: selectedCheckbox === "two" ? "green" : "grey",
+          }}
+        >
           7
           <input
             type="radio"
+            hidden
             value="two"
             checked={selectedCheckbox === "two"}
             onChange={handleCheckboxChange}
           />
         </label>
-        <label htmlFor="#">
+        <label
+          style={{
+            backgroundColor: selectedCheckbox === "three" ? "green" : "grey",
+          }}
+        >
           7 ⬇
           <input
             type="radio"
+            hidden
             value="three"
             checked={selectedCheckbox === "three"}
             onChange={handleCheckboxChange}

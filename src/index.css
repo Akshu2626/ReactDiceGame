@@ -8,19 +8,20 @@ html,
 body {
   width: 100%;
   height: 100%;
+  background-image: url(https://img.freepik.com/free-vector/futuristic-background-design_23-2148503793.jpg);
 }
 
 .main {
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
-  /* background-color: lightpink; */
 }
 
 .header {
   width: 100%;
   height: 5rem;
-  background-color: red;
+  background-color: black;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -48,12 +49,12 @@ body {
 .gamebody {
   width: 100%;
   height: 85%;
-  background-color: lightblue;
+  /* background-color: lightblue; */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .pointBox {
@@ -65,7 +66,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 2rem;
-  box-shadow: 10px 10px 10px black;
+  box-shadow: 5px 5px 10px grey;
   transform: 0.6s;
 }
 
@@ -97,20 +98,33 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
   /* background-color: purple; */
 }
 
 .selectInput {
   padding: 1rem;
   border-radius: 12px;
+  background-color: yellow;
+
+}
+
+.selectInput option{
+  background-color: orange;
 }
 
 label {
-  background-color: black;
-  border-radius: 100px;
+  
+  border-radius: 10px;
   padding: 1rem;
   color: white;
+}
+
+.losswon{
+  font-size: 1rem;
+  width: max-content;
+  padding: .3rem;
+  
 }
 
 .dice {
@@ -145,7 +159,7 @@ label {
 
 @media (max-width: 700px) {
   .header {
-    background-color: green;
+    
     padding: 0px 1rem;
   }
   .point-input {
