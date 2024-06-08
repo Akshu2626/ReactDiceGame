@@ -18,7 +18,7 @@ const App = () => {
 
   const UpateData = async () => {
     try {
-      const response = await fetch("http://localhost:3001/", {
+      const response = await fetch("https://sevenupbackend.onrender.com/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -34,7 +34,7 @@ const App = () => {
 
   useEffect(() => {
     const fetchData = () => {
-      fetch("http://localhost:3001/")
+      fetch("https://sevenupbackend.onrender.com/")
         .then((res) => res.json())
         .then((data) => setTotal(data))
         .catch((e) => console.log("Error"));
