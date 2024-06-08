@@ -100,6 +100,8 @@ const App = () => {
         console.log("something went wrong");
         let a = selectedOption;
         // let negitiveNum = a * -1;
+        // let xyz=10
+
         UpateData();
         setTotal((res) => {
           return res - a;
