@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "./component/Header";
 import GameBody from "./component/GameBody";
 import spinn from "./assets/spin.mp3";
+import cong from "./assets/cong.mp3";
 import countIncrese from "./assets/pointincrese.wav";
 import Confetti from "react-confetti";
 
@@ -51,6 +52,11 @@ const App = () => {
     audio.play();
   };
 
+  const Congratulation = () => {
+    const audio = new Audio(cong);
+    audio.play();
+  };
+
   const generateRandomNumber = () => {
     playSpinSound();
     let randome = Math.floor(Math.random() * 14);
@@ -62,6 +68,7 @@ const App = () => {
       if (randome === 7 && selectedCheckbox === "two") {
         // console.log("5 X");
         setCongress(false);
+        Congratulation();
         setTimeout(() => {
           setCongress(true);
         }, 3000);
@@ -92,7 +99,7 @@ const App = () => {
         }, 5000);
 
         let a = selectedOption * 2;
-        
+
         setTotal((res) => res + a);
         UpateData();
       } else {
