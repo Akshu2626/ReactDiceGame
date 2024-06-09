@@ -17,6 +17,10 @@ const App = () => {
 
   const [total, setTotal] = useState("loading...");
 
+  if (total <= 0) {
+    alert("Inefficient Balance");
+  }
+
   const UpateData = async () => {
     try {
       const response = await fetch("https://sevenupbackend.onrender.com/", {
@@ -126,6 +130,7 @@ const App = () => {
     const value = event.target.value;
     setSelectedCheckbox(value);
   };
+
   return (
     <div className="main">
       <Header total={total} />
