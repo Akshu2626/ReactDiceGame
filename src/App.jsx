@@ -72,8 +72,8 @@ const App = () => {
         }, 5000);
 
         let a = selectedOption * 5;
-        UpateData();
         setTotal((res) => res + a);
+        UpateData();
       } else if (randome < 7 && selectedCheckbox === "three") {
         // console.log("looser");
         setTitlee(false);
@@ -81,7 +81,6 @@ const App = () => {
           setTitlee(true);
         }, 5000);
         let a = selectedOption * 2;
-
         setTotal((res) => res + a);
         UpateData();
       } else if (randome > 7 && selectedCheckbox === "one") {
@@ -93,9 +92,9 @@ const App = () => {
         }, 5000);
 
         let a = selectedOption * 2;
-        UpateData();
-
+        
         setTotal((res) => res + a);
+        UpateData();
       } else {
         console.log("something went wrong");
         let a = selectedOption;
