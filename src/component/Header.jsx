@@ -1,6 +1,6 @@
 import React from "react";
 
-const Header = ({ total }) => {
+const Header = ({ total,imagePath }) => {
   return (
     <div className="header">
       <div className="head-avatar">

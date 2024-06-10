@@ -14,8 +14,8 @@ const App = () => {
   const [spin, setIsSpin] = useState(false);
   const [congress, setCongress] = useState(true);
   const [titlee, setTitlee] = useState(true);
-
   const [total, setTotal] = useState("loading...");
+
 
   if (total <= 0) {
     alert("Inefficient Balance");
@@ -86,7 +86,6 @@ const App = () => {
         setTotal((res) => res + a);
         UpateData();
       } else if (randome < 7 && selectedCheckbox === "three") {
-        // console.log("looser");
         setTitlee(false);
         setTimeout(() => {
           setTitlee(true);
@@ -134,6 +133,7 @@ const App = () => {
   return (
     <div className="main">
       <Header total={total} />
+
       <Confetti hidden={congress === true ? true : false} />
       <GameBody
         handleCheckboxChange={handleCheckboxChange}
